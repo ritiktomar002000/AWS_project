@@ -13,7 +13,7 @@ def index():
     data = {"message":'Hello world 22'}
     return json.dumps(data), 200, {'Content-Type':'application/json'}
 
-@app.route('/home')
+@app.route('/home', methods=["GET"])
 def home():
     return render_template('/search.html')
 
